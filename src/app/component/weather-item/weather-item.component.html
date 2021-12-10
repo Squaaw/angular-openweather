@@ -1,0 +1,22 @@
+<div class="weather-item" (mouseover)="mouseOver()" (mouseleave)="mouseDown()">
+    <div class="current-data">
+        <h2 class="city-name"> {{ displayCityName() }} <sup>{{ weather.country }}</sup></h2>
+        <p class="current-weather">
+            <img src="http://openweathermap.org/img/wn/{{ weather.icon }}@2x.png" alt="icon" />
+            <span>{{ weather.currentTemp }}°</span>
+        </p>
+    </div>
+
+    <div class="day-weather">
+        <p class="description">{{ weather.description }}</p>
+        <p class="day-temps">{{ weather.maxTemp }}° / {{ weather.minTemp }}°</p>
+        <p>Ressenti {{ weather.feelsLike }}°</p>
+    </div>
+
+    <p class="datetime">Dernière actualisation : {{ weather.date }}</p>
+
+    <div class="icon-buttons" [ngClass]="hide">
+        <span (click)="refresh()" class="material-icons">refresh</span>
+        <span (click)="delete()" class="material-icons">delete</span>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+<mat-form-field appearance="fill" class="select" *ngIf="cityList.length > 0">
+    <mat-label>Sélectionnez la ville</mat-label>
+    <mat-select>
+        <mat-option *ngFor="let city of cityList" (click)="selectCity(city)" value="city.id">
+            {{ displayCityName(city) }}
+        </mat-option>
+    </mat-select>
+</mat-form-field>
+
+<div class="error" *ngIf="error">
+    La ville n'a pas été trouvée.
+</div>

@@ -1,0 +1,78 @@
+.weather-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2f2f2f;
+    color: white;
+    border-radius: 10px;
+    padding: 5px 0;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    position: relative;
+    height: 100%;
+
+    h2{
+        text-align: center;
+        max-width: 200px;
+    }
+
+    .current-data{
+        .city-name{
+            margin: 0;
+
+            sup{
+                font-size: 10px;
+                color: #aeaeae;
+            }
+        }
+    
+        .current-weather{
+            font-size: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img{
+                width: 50px;
+            }
+        }
+    }
+
+    .day-weather{
+        height: 88.33px;
+        text-align: center;
+
+        .description{
+            max-width: 150px;
+        }
+    }
+}
+
+.icon-buttons{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    height: 100%;
+    background-color: #a2a2a2a8;
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+
+    .material-icons{
+        margin: auto;
+    }
+
+    .material-icons:hover{
+        cursor: pointer;
+        opacity: .8;
+    }
+}
+
+.hide{
+    display: none;
+}
+
+.datetime{
+    margin: 0;
+    font-size: 9px;
+}
